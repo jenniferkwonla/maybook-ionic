@@ -1,3 +1,52 @@
+<!-- 
+
 <ion-app>
   <ion-router-outlet></ion-router-outlet>
+  
+</ion-app> 
+
+-->
+
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu side="end" contentId="main-content" type="overlay">
+      <ion-content>
+
+          <ion-menu-toggle auto-hide="false">
+
+            <ion-buttons style="padding-top:30px;">
+              <button ion-button menuClose>
+                <ion-icon name="chevron-back-outline"></ion-icon>
+              </button>
+            </ion-buttons>
+            
+
+            <ion-list id="SettingsList">
+          
+              <ion-list-header style="font-size:12px;">Settings</ion-list-header>
+              <ion-note style="padding-left:20px !important;padding-top:10px !important;">Manage account</ion-note>
+
+            <ion-item tappable routerLink="accountsettings" routerLinkAction="active" lines="none" detail="false" >
+              <a style="font-size:12px;padding:0;margin:0;">Account</a>
+            </ion-item>
+
+            <ion-item tappable routerLink="logout" routerLinkAction="active" lines="none" detail="false">
+              <a style="font-size:12px;">Logout</a>
+            </ion-item>
+
+            <ion-item tappable routerLink="about" routerLinkAction="active" lines="none" detail="false">
+              <a style="font-size:12px;">About</a>
+            </ion-item>
+
+
+          
+        </ion-list>
+      </ion-menu-toggle>
+
+      </ion-content>
+    </ion-menu>
+
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+
+  </ion-split-pane>
 </ion-app>

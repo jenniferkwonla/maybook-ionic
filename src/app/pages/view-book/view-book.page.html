@@ -1,0 +1,31 @@
+<ion-content [fullscreen]="true">
+
+	<ion-buttons style="padding-top:30px;">
+		<button (click)="back()">
+		  <ion-icon name="chevron-back-outline"></ion-icon>
+		</button>
+	  </ion-buttons>
+
+	<ion-grid *ngIf="bookData.title != undefined"> 
+		<ion-row style="margin:0 auto;display:flex;justify-content: center;">
+			<img width="auto" height="200px" [src]="bookData.image"/>
+		</ion-row>
+		<ion-row style="margin:0 auto;display:flex;justify-content: center;">
+			<button style="padding-top:10px;text-align:center;" ion-button (click)="addToLibrary()">
+				<span style="color:#a18ef1;text-align:right;align-items:center;font-size:14px;">Add to Library </span><ion-icon name="heart-outline" style="zoom:1.0;"></ion-icon>
+			</button>
+		</ion-row>
+		<ion-row style="margin:0 auto;display:flex;justify-content: center;">
+			<div style="font-weight:bold; font-size:16px;text-align:center;padding-top:10px">{{bookData.title}}</div>
+		</ion-row>
+		<ion-row style="margin:0 auto;display:flex;justify-content: center;">
+			<div style="display:block; padding-top:5px; padding-bottom:20px;font-size:12px; text-align:center;">by {{bookData.author}}</div>
+		</ion-row>
+		
+
+			<ion-row>
+				<app-google-books [bookData]="bookData"></app-google-books>
+			</ion-row>
+	</ion-grid>
+
+</ion-content>

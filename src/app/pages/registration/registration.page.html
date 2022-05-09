@@ -1,0 +1,33 @@
+<ion-content fullscreen="true">
+    
+  <ion-buttons style="padding-top:30px;">
+		<button (click)="back()">
+		  <ion-icon name="chevron-back-outline"></ion-icon>
+		</button>
+	  </ion-buttons>
+
+  <div class="RegisterContent">
+    <div style="text-align:center;"><img width="70%" style="padding-bottom:10px;" src="../../../assets/img/MayBook_logo_v01.jpg" /></div>
+    <div style="width:75%;margin:0 auto;">
+     <div style="text-align:center;font-weight:bold;">Sign Up</div>
+      <form [formGroup]="ionicForm" (ngSubmit)="submitRegistrationForm()">
+        <ion-item lines="full">
+          <ion-label position="floating" style="font-size:14px;">Username</ion-label>
+          <ion-input type="text" formControlName="userid" required></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position="floating" style="font-size:14px;">Password</ion-label>
+          <ion-input type="password" formControlName="password" required></ion-input>
+        </ion-item>
+
+        <div style="margin-top:30px;">
+          <ion-button style="height:40px; width:85%; margin:auto;display:block;" shape="round" type="submit" class="SignUpButton" expand="block">Sign Up</ion-button>
+        </div>
+        <div class="SmallText" style="display:block; width:100%;text-align:center;padding-top:15px;color:black;">Have an account?
+          <a [routerLink]="['/login']" class="SmallText" style="color:#8c8cf9;">Sign In</a>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</ion-content>

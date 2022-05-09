@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.emma",
+	"appName": "frontend",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

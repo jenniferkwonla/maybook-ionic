@@ -1,17 +1,41 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" overflow-scroll="true">
+  <div style="padding-top:40px;padding-right:10px;float:right;display:block;">
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false">
+        <ion-icon name="settings-outline" style="font-size:25px;"></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+  </div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <div class="Tab3Content" style="height:fit-content;width:100%;margin-top:10px;">
+    
+    <div style="margin-top:5px;">
+      <strong class="Header">Library</strong>
+        <div style="" *ngIf="library">
+          <ion-list lines="full" *ngFor="let book of library">
+            <ion-item class="IonCard">
+      
+              <ion-grid *ngIf="book.title != undefined"> 
+                <ion-row style="padding:0; margin:0;" tappable [routerLink]="['/view-book', book.id]" routerLinkAction="active">
+                  <ion-col size="3" style="margin:0 auto; padding-left:5px;" *ngIf="book.image">
+                    <img width="100%" height="auto" [src]="book.image"/>
+                  </ion-col>
+                  <ion-col size="9">
+                    <div class="BookTitle">{{book.title}}</div>
+                    <div class="BookAuthor">by {{book.author}}</div>
+                  </ion-col>
+                          <div class="BookDescription" style="font-size:10px;text-indent: 15px;">{{book.description1.split(".")}}</div>
+      
+                </ion-row>
+            </ion-grid>
+      
+            </ion-item>
+          </ion-list>
+        </div>
+      
+        <div *ngIf="library.length==0">
+          <div class="AddToLibraryText">Add To Your Library</div>
+        </div>
+      </div>
+  </div>
 </ion-content>

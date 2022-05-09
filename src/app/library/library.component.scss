@@ -1,0 +1,71 @@
+.Header{
+    font-size:16px; 
+	margin:10px 20px 0px 10px;
+	font-family: AvenirNext Bold !important;
+	color: black;
+}
+
+.BookTitle{
+    font-family:AvenirNext Bold !important;
+    font-size:12px;
+    padding-top:20px;
+    padding-bottom:7px;
+}
+
+.BookAuthor{
+    font-family:AvenirNext Regular !important;
+    font-size:11px; 
+    padding-bottom:3px;
+}
+
+.BookDescription{
+    font-family:AvenirNext Regular !important;
+    font-size:11px;
+    text-indent: 15px;
+    padding: 6px 5px;
+}
+
+
+.AddToLibraryText{
+    color:#785adb;
+    font-family:AvenirNext Regular !important; 
+    font-size:14px;
+    font-weight:bold;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    //position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-top:50px;
+}
+
+.IonCard{ 
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    //box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, #785adb 0px 3px 7px -3px; 
+    //box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, #785adb 0px 3px 7px -3px; 
+}
+
+img{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, #785adb 0px 3px 7px -3px; 
+
+}
+
+ion-item{
+    height: 20%;
+    color: black;
+    //box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, #785adb 0px 3px 7px -3px; 
+}
+
+ion-list {
+    overflow: hidden;
+    overflow-y: auto;
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }

@@ -1,0 +1,32 @@
+ion-content{
+    font-family: AvenirNext Regular !important;
+    font-size: 12px;
+}
+
+ion-label{
+    font-family: AvenirNext Regular !important;
+    font-size: 12px;
+}
+
+ion-note{
+    font-family: AvenirNext Regular !important;
+    font-size: 12px;
+}
+
+button{
+    background-color:white;
+}
+
+ion-icon{
+    zoom:2.5;
+    background-color:white;
+    --background:white;
+}
+
+ion-item a{
+    color:black !important;
+}
+
+ion-item.item:hover a{
+    color:  #a18ef1 !important;
+}

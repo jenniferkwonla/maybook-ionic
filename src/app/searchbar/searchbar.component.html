@@ -1,0 +1,21 @@
+<div Class="WhiteBackground" style="margin-top:5px;">
+  <div class="Header"style=""><strong>Search</strong></div>
+  <div style="display:block;">
+    <ion-searchbar style="width:100%;transform: scale(1.0);margin:0;font-size:8px;line-height:0.8em;" 
+        [(ngModel)]="searchModel"
+        showCancelButton="always" 
+        placeholder="By title or author"
+        inputmode="search"
+        debounce="500"
+        (ionChange)="ionChange($event)"></ion-searchbar>
+        <ion-list *ngIf="searchResults">
+          <ion-item *ngFor="let result of searchResults" tappable routerLink="view-book/{{result.id}}" routerLinkAction="active">
+            <ion-label><img height="50px" [src]="result.image"/></ion-label>
+            <ion-label style="font-size:10px; color:darkgray;">{{result.title}}</ion-label>
+            <ion-label style="font-size:10px; color:darkgray;">{{result.author}}</ion-label>
+          </ion-item>
+        </ion-list>
+  </div>
+</div>
+
+

@@ -1,0 +1,18 @@
+.AddToLibraryButton{
+    --background: #785adb;
+    --width:40px;
+    --height:20px;
+    font-size: 12px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, #785adb 0px 3px 7px -3px; 
+}
+
+
+button{
+    background-color:transparent;
+}
+
+ion-icon{
+    zoom:2.5;
+    background-color:white;
+    --background:white;
+}

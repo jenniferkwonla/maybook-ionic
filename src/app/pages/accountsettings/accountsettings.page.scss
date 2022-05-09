@@ -1,0 +1,27 @@
+.Header{
+    padding: 20px 0 10px 10px;
+    font-family:AvenirNext Regular !important;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.Text{
+    padding: 0 0 10px 10px;
+    font-family:AvenirNext Regular !important;
+    font-size:12px;
+    margin-bottom:10px;
+}
+
+ion-content{
+    overflow: hidden;
+    line-height:1.2em;
+}
+
+button{
+    background-color:white;
+}
+ion-icon{
+    zoom:2.5;
+    background-color:white;
+    --background:white;
+}

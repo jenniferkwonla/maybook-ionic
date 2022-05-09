@@ -1,0 +1,94 @@
+.BookCategory{
+	margin: 0 10px 20px 0;
+}
+
+.Header{
+	padding: 20px 0 10px 10px;
+    font-family: AvenirNext Bold !important;
+    font-size:14px;
+	color: black;
+}
+
+.SubHeader{
+	font-size:11px; 
+	margin:2px 20px 10px 20px;
+	font-family: AvenirNext Regular !important;
+	color: black;
+}
+
+.Tab1Content{
+	margin: 5px 5px;
+	padding-top:150px;
+	/*
+	left:0;
+	right:0;
+	position:fixed;*/
+}
+
+.FirstContent{
+	font-family: AvenirNext Bold !important;
+	font-size: 14px;
+	display:flex;
+	margin:0 auto;
+	padding:15px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, #785adb 0px 3px 7px -3px; 
+}
+
+.AppSearchBar{
+	top:30px;
+	left:0;
+	right:0;
+	position:absolute;
+	height:fit-content;
+}
+
+.SearchBarHeader{
+	font-size:16px; 
+	margin:10px 20px 0px 10px;
+	font-family: AvenirNext Bold !important;
+	color: black;
+}
+
+.Tab1Image {
+	margin:auto;
+	display:block;
+	height:150px;
+}
+
+
+.WhiteBackground{
+	background-color:white;
+    --background:white;
+}
+
+
+ion-icon{
+    color:black;
+}
+
+ion-card{
+	margin: 3px !important;
+	padding: 3px !important;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, #785adb 0px 3px 7px -3px; 
+}
+
+
+ion-card-header, ion-card-content{
+	margin: 0 !important;
+	padding: 7px !important;
+}
+
+ion-card-header{
+	height:50px;
+}
+
+ion-content{
+    padding:20px 10px;
+    background-color:ghostwhite;
+    height: fit-content;
+}
+
+ion-list{
+	background-color:white;
+    --background:white;
+}
