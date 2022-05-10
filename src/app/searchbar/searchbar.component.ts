@@ -60,12 +60,10 @@ export class SearchbarComponent implements OnInit {
   }
 
   ionViewWillLeave(){
-		console.log("ionview will leave searchbar");
    // this.searchField = new FormControl('');
 	}
 
 	ionViewDidLeave(){
-		console.log("ionview did leave searchbar");
     //this.searchField = new FormControl('');
 	}
 }

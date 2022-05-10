@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
+import { NavController} from '@ionic/angular';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -10,10 +11,15 @@ import { DataService } from 'src/app/services/data.service';
 export class AccountsettingsPage implements OnInit {
 
   public username:string;
-  constructor(private location:Location, public dataService: DataService) { }
+  constructor(private navCtrl: NavController, private location:Location, public dataService: DataService) { }
 
   ngOnInit() {
-    this.username = this.dataService.userid;
+    this.username = this.dataService.username;
+  }
+
+  deleteAccount(){
+    this.dataService.deleteAccount();
+    this.navCtrl.navigateForward('/login');
   }
 
   back():void{

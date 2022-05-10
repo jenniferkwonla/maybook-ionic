@@ -1,6 +1,6 @@
 import { Deserializable } from '../interface/deserializable';
 
-export class BookStackData implements Deserializable{
+export class StackData implements Deserializable{
     public image:string;
     public title:string;
     public description:string;

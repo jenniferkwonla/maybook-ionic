@@ -54,7 +54,6 @@ export class LibraryComponent implements OnInit {
   }
 
   ionViewWillEnter(){   
-    console.log("ionviewwillenter library");
     this.library = []; 
 
     //this.dataService.getBookInLibraryByUserId();

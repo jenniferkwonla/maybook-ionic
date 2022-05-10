@@ -164,25 +164,21 @@ export class Tab1Page {
 
 
 	ionViewWillEnter(){
-		console.log("ionview will enter tab1");
 		this.searchModel="";
 		this.getRecentSearchedBooks();
 	}
 
 	ionViewDidEnter(){
-		console.log("ionview did enter tab1");
 		this.searchModel="";
 	}
 
 	ionViewWillLeave(){
-		console.log("ionview will tab1");
 		this.searchModel="";
 		//this.searchBar.searchbar.value ="";
 		//this.searchBar.searchbar.clearInput(null);
 	}
 
 	ionViewDidLeave(){
-		console.log("ionview did tab1");
 		this.searchModel="";
 		//this.searchBar.searchbar.value ="";
 		//this.searchBar.searchbar.clearInput(null);
@@ -206,6 +202,14 @@ export class Tab1Page {
 		  this.prevSearch = term;
 	
 		  let tempSearchResults: BookData[]=[];
+
+		  //search allbooks
+		  let booksWithTitles = this.AllBookData.filter(bookData => bookData.title.toLowerCase().includes(term.toLowerCase()));
+		  let booksWithAuthors = this.AllBookData.filter(bookData => bookData.author.toLowerCase().includes(term.toLowerCase()));
+		  this.searchResults = this.searchResults.concat(booksWithTitles);
+		  this.searchResults = this.searchResults.concat(booksWithAuthors);
+
+		  //search googlebookapi
 		  this.googleBookApiService.searchGoogleVolumes(term).then((data) =>{
 			let googleBooksApiResults = data;
 	
@@ -220,8 +224,11 @@ export class Tab1Page {
 			  this.searchResults.push(bookData);
 			});
 		  });
-	
-		  this.dataService.getAllBooks();
+
+		  let uniqueSearchResults = this.searchResults.map(item => item).filter((value,index,self) => self.indexOf(value)===index);
+		  this.searchResults = uniqueSearchResults;
+		  console.log(this.searchResults);
+
 		}
 	  }
 }

@@ -22,7 +22,13 @@ export class Tab2Page {
       this.allBooks = result;
     });
 
+    // create a bookstack table with
+    // id, all user ids, and text, which are a list of book ids that will be released.
+    // or have a column for user where it says if they saw the most recent bookstack, and it changes 
+    // using the last login date
     this.dataService.getBookStack().then((result) => {
+      console.log("book stack");
+      console.log(result);
       this.cards = result;
     });
   }

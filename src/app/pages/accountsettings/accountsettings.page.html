@@ -14,5 +14,9 @@
 	<div class="Header">Password</div>
 	<div class="Text" >xxx</div>
 
-	<div class="Text">To delete your account, contact MayBook customer support.</div>
+	<ion-list>
+		<ion-item routerLinkAction="active" lines="none" detail="false">
+			<a style="font-size:12px;padding:0;margin:0;" ion-button (click)="deleteAccount()"><ion-icon name="trash-outline" style="zoom:1.5"></ion-icon> Delete Account</a>
+		</ion-item>
+	</ion-list>
 </ion-content>

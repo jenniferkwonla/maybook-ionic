@@ -47,7 +47,7 @@ export class LoginPage implements OnInit {
 
       //this.dataService.getLogin(this.ionicForm.value.userid, this.ionicForm.value.password);
       this.dataService.getLogin(this.ionicForm.value.userid, this.ionicForm.value.password).then(async result => {
-      if(result.length > 0){
+      if(result != undefined && result.length > 0){
         this.accountFound = true;
       }
 

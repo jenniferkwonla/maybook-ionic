@@ -122,3 +122,27 @@
   font-family: AvenirNext Regular !important;
   font-size:10px;
 }
+
+.EndOfStackText{
+  color:#785adb;
+  font-family:AvenirNext Regular !important; 
+  font-size:18px;
+  font-weight:bold;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  //position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-top:50px;
+}
+
+ion-icon{
+  zoom:2.0;
+  background-color:ghostwhite;
+  --background:ghostwhite;
+  color:#785adb;
+  --color: black;
+}

@@ -1,7 +1,7 @@
 import { Deserializable } from '../interface/deserializable';
 
 export class AccountData implements Deserializable{
-    public id: string;
+    public id: number;
     public userid: string;
     public password: string;
 

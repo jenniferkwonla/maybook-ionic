@@ -56,7 +56,6 @@ export class Tab3Page implements OnInit{
   }
 
   ionViewWillEnter(){
-    console.log("ionviewwillenter library");
     this.library = []; 
 
     this.recent = this.dataService.getRecentlyLovedTitlesInLibrary();

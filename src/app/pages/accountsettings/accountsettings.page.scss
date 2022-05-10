@@ -25,3 +25,13 @@ ion-icon{
     background-color:white;
     --background:white;
 }
+
+ion-item a{
+    font-family:AvenirNext Regular !important;
+    font-weight:bold;
+    color:black !important;
+}
+
+ion-item.item:hover a{
+    color:  #a18ef1 !important;
+}

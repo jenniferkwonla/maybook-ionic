@@ -75,19 +75,15 @@ export class ViewBookPage implements OnInit{
 	}
 
 	ionViewWillEnter(){
-		console.log("ionview will enter viewbook");
 	}
 
 	ionViewDidEnter(){
-		console.log("ionview did enter viewbook");
 	}
 
 	ionViewWillLeave(){
-		console.log("ionview will leave viewbook");
 	}
 
 	ionViewDidLeave(){
-		console.log("ionview did leave viewbook");
 	}
 
 }

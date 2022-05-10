@@ -13,11 +13,11 @@
       <form [formGroup]="ionicForm" (ngSubmit)="submitRegistrationForm()">
         <ion-item lines="full">
           <ion-label position="floating" style="font-size:14px;">Username</ion-label>
-          <ion-input type="text" formControlName="userid" required></ion-input>
+          <ion-input type="text" formControlName="userid" style="font-size:12px;" required></ion-input>
         </ion-item>
         <ion-item lines="full">
           <ion-label position="floating" style="font-size:14px;">Password</ion-label>
-          <ion-input type="password" formControlName="password" required></ion-input>
+          <ion-input type="password" formControlName="password" style="font-size:12px;" required></ion-input>
         </ion-item>
 
         <div style="margin-top:30px;">
