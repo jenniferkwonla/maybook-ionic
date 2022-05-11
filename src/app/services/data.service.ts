@@ -12,10 +12,10 @@ import { BookstackData } from '../data/bookstack-data';
 })
 export class DataService {
 
-  baseUrl = 'http://127.0.0.1:3000/api';
+  //baseUrl = 'http://127.0.0.1:3000/api';
   //baseUrl = 'http://9ac1-2600-1700-5a60-a110-2856-5a0a-fb5e-63d1.ngrok.io/api';
   //baseUrl = 'https://dffc-2600-1700-5a60-a110-2856-5a0a-fb5e-63d1.ngrok.io/api';
-  //baseUrl = 'https://immense-wave-76077.herokuapp.com/api';
+  baseUrl = 'https://immense-wave-76077.herokuapp.com/api';
   public username:string;
   public userid: string;
   AllBooksData: BookData[] = [];
@@ -133,11 +133,11 @@ export class DataService {
           let bookIds = JSON.stringify(bookStackData.books);
           let booksTemp  = bookIds.replace(/["'\\]/g, "");
           booksTemp = booksTemp.replace(/[\[\]]/g, "");
-          let bookIdsArray = booksTemp.split(",");
-          console.log(bookIdsArray);
+          let bookIdsArray = booksTemp.split(", ");
 
           bookIdsArray.forEach( bookId => {
-            let bookDataArray = this.AllBooksData.filter(bookData => bookData.id == bookId);
+            let bookDataArray = this.AllBooksData.filter(bookData => bookData.id.toString() == bookId.toString());
+            console.log(bookDataArray);
             if(bookDataArray.length > 0 ){
               let bookData = bookDataArray[0];
               console.log(bookData);
