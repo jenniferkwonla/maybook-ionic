@@ -52,6 +52,7 @@ export class Tab1Page {
 			//this.BookTitles = this.dataService.getBookTitles();
 			let googlevolumeids = this.dataService.getGoogleVolumeIds();
 			
+			
 			// get categories & images
 			googlevolumeids.forEach(volumeId => {
 
@@ -107,11 +108,8 @@ export class Tab1Page {
 
 	private getRecentSearchedBooks(){
 		this.dataService.getAllBooks().then((result) => {
-			//let newAllBookTitles = this.dataService.getBookTitles();
-			//let allGoogleVolumeIds = this.dataService.getGoogleVolumeIds();
-			// filter current all books with all books
+
 			let recentAllBookData = this.dataService.getAllBooksData(); 
-			//console.log(recentAllBookData);
 
 			this.AllBookData = [];
 			recentAllBookData.forEach(bookData=> {

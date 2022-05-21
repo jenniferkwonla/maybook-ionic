@@ -68,7 +68,11 @@ export class DataService {
     this.AllBooksData=[];
 		return this.sendBookGetAllBooksRequestToExpress(this.baseUrl + "/" + "book"+"/").then((data)=>{
       let allBooksData:BookData[] = data;
-      allBooksData = allBooksData.filter(x=> x.image.length>0);
+      allBooksData = allBooksData.filter(x => {
+        if(x.image != null && x.image.length > 0){
+          return x;
+        }
+      });
       const key="googlevolumeid";
       let uniqueResult = [...new Map(allBooksData.map(item => [item[key], item])).values()];
       let uniqueAllBooks = Array.from(new Set(uniqueResult));
